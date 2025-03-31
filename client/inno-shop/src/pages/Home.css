@@ -1,0 +1,180 @@
+.home {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); 
+    color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    margin: 80px auto;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+
+.home h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+
+.home p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+
+    margin: 10px 0;
+}
+
+
+.date-time-info {
+    margin-top: 30px;
+    morging-bottom: 100px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.date-time-info p {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.date-time-info p strong {
+    font-weight: bold;
+    color: #feb47b; 
+}
+
+
+.home:hover {
+    transform: translateY(-10px); 
+}
+
+@media (max-width: 600px) {
+    .home {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .home h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+.search-section {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+.search-section h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.search-section input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-section button {
+    padding: 10px 20px;
+    border: none;
+    background: #feb47b;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-section button:hover {
+    background: #ff7e5f;
+}
+
+
+.filter-section {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+.filter-section h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.filter-field {
+    margin-bottom: 15px;
+    text-align: left;
+    color: #fff;
+}
+
+.filter-field label {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-field input[type="number"],
+.filter-field input[type="checkbox"] {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+}
+
+.filter-section button {
+    padding: 10px 20px;
+    border: none;
+    background: #feb47b;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filter-section button:hover {
+    background: #ff7e5f;
+}
+
+
+.error {
+    color: #dc2626;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.9); 
+    color: #000; 
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    text-align: left;
+}

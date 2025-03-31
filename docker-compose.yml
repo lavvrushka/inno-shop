@@ -1,0 +1,62 @@
+services:
+  user-management:
+    image: usermanagement
+    restart: on-failure
+    build:
+      context: ./UserManagement
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=db1;Database=UserManagement;Username=postgres;Password=12122004
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5195:8080"
+    depends_on:
+      - db1
+
+  product-management:
+    image: productmanagement
+    restart: on-failure
+    build:
+      context: ./ProductManagement
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=db2;Database=ProductManagement;Username=postgres;Password=12122004
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5019:8080"
+    depends_on:
+      - db2
+
+  db1:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12122004
+      POSTGRES_DB: UserManagement
+    volumes:
+      - database_data_user:/var/lib/postgresql/data
+
+  db2:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12122004
+      POSTGRES_DB: ProductManagement
+    volumes:
+      - database_data_product:/var/lib/postgresql/data
+
+  client:
+    build:
+      context: ./client/inno-shop
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - user-management
+      - product-management
+
+volumes:
+  database_data_user:
+  database_data_product:

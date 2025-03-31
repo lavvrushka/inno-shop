@@ -1,0 +1,147 @@
+.product-list-page {
+    max-width: 1200px;
+    margin: 0px 0px 100px 370px; 
+    margin-top: 100px;
+    padding: 30px;
+    background-color: #f9f9fc;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .page-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #2d2d2d;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .no-products {
+    text-align: center;
+    font-size: 18px;
+    color: #aaa;
+  }
+  
+  .product-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #e6e6e6;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .product-card:hover .product-image {
+    transform: scale(1.1);
+  }
+  
+  .product-details {
+    padding: 20px;
+  }
+  
+  .product-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+  
+  .product-description {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .product-info {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .product-info p {
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .product-info strong {
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .pagination-controls {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .page-numbers {
+    display: inline-flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .page-button {
+    padding: 10px 18px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .page-button:hover {
+    background-color: #3498db;
+    transform: translateY(-3px);
+  }
+  
+  .page-button.active {
+    background-color: #0056b3;
+  }
+  
+  .page-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 768px) {
+    .product-cards {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+  
+    .page-title {
+      font-size: 30px;
+    }
+  
+    .page-button {
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+  }
+  
