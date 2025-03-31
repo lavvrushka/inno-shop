@@ -1,8 +1,8 @@
 # inno-shop
 # Setup and Installation
 ### Clone the repository
-- git clone https://github.com/lavvrushka/EventApp.git
-- cd EventApp
+- git clone https://github.com/lavvrushka/inno-shop
+- cd inno-shop
 - docker-compose up --build
 - localhost:3000
 ### Admin 
